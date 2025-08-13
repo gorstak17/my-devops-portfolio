@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "../components/ui/Button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/Card";
 import { Badge } from "../components/ui/Badge";
-import profileImage from "../assets/images/profile.jpg";
+
 import { 
   Terminal, 
   Server, 
@@ -140,7 +140,7 @@ const Portfolio = () => {
                 <div className="relative">
                   <div className="w-32 h-32 rounded-full border-4 border-green-400 overflow-hidden bg-green-400/10 backdrop-blur-sm">
                     <img 
-                      src={profileImage} 
+                      src="/profile.jpg" 
                       alt="Aleksandar Lončar"
                       className="w-full h-full object-cover"
                     />
