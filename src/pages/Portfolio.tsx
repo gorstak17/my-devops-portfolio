@@ -140,7 +140,7 @@ const Portfolio = () => {
                 <div className="relative">
                   <div className="w-32 h-32 rounded-full border-4 border-green-400 overflow-hidden bg-green-400/10 backdrop-blur-sm">
                     <img 
-                      src="/profile.jpg" 
+                      src="/profile.jpg?v=1" 
                       alt="Aleksandar Lončar"
                       className="w-full h-full object-cover"
                     />
