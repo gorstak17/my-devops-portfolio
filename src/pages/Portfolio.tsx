@@ -14,7 +14,8 @@ import {
   Globe,
   Settings,
   Activity,
-  Package
+  Package,
+  Download
 } from "lucide-react";
 
 const Portfolio = () => {
@@ -45,6 +46,7 @@ const Portfolio = () => {
   const skills = [
     { name: "Terraform", level: 95, icon: Settings },
     { name: "AWS", level: 92, icon: Cloud },
+    { name: "Azure", level: 88, icon: Cloud },
     { name: "Docker", level: 90, icon: Package },
     { name: "Kubernetes", level: 88, icon: GitBranch },
     { name: "Linux", level: 90, icon: Terminal },
@@ -135,22 +137,6 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="mb-8">
-              {/* Profile Picture */}
-              <div className="mb-6 flex justify-center">
-                <div className="relative">
-                  <div className="w-32 h-32 rounded-full border-4 border-green-400 overflow-hidden bg-green-400/10 backdrop-blur-sm">
-                    <img 
-                      src="/profile.jpg?v=2" 
-                      alt="Aleksandar Lončar"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-400 rounded-full flex items-center justify-center">
-                    <Terminal className="w-5 h-5 text-black" />
-                  </div>
-                </div>
-              </div>
-              
               <h1 className="text-6xl font-bold text-green-400 mb-4">
                 <span className="text-green-300">$</span> whoami
               </h1>
@@ -162,8 +148,10 @@ const Portfolio = () => {
             
             <div className="max-w-3xl mx-auto mb-12">
               <p className="text-lg text-green-200 leading-relaxed">
-                Passionate DevOps engineer with expertise in AWS cloud infrastructure, Infrastructure as Code, and automation. 
-                Building scalable, secure, and efficient systems using Terraform, Docker, and modern CI/CD practices.
+                Detail-oriented DevOps Engineer with demonstrated history of working in cloud infrastructure and automation. 
+                Expertise in AWS and Azure cloud infrastructure, Infrastructure as Code, and automation. 
+                Building scalable, secure, and efficient systems using Terraform, Docker, and modern CI/CD practices. 
+                EU passport holder, willing to relocate for exciting opportunities.
               </p>
             </div>
 
@@ -174,6 +162,14 @@ const Portfolio = () => {
               >
                 <Terminal className="w-4 h-4 mr-2" />
                 View Projects
+              </Button>
+              <Button 
+                variant="outline" 
+                className="border-green-400 text-green-400 hover:bg-green-400 hover:text-black font-bold px-8 py-3"
+                onClick={() => window.open('/Loncar DevOps.pdf', '_blank')}
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Download CV
               </Button>
               <Button 
                 variant="outline" 
