@@ -18,6 +18,10 @@ import {
   Download
 } from "lucide-react";
 
+/** Static files in `public/` — use PUBLIC_URL so GitHub Pages subpaths resolve correctly. */
+const publicAsset = (path: string) =>
+  `${process.env.PUBLIC_URL}${path.startsWith("/") ? path : `/${path}`}`;
+
 const Portfolio = () => {
   const [typedText, setTypedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -132,11 +136,18 @@ const Portfolio = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative z-10 pt-20 pb-16">
+      {/* Hero / About — id="about" matches nav */}
+      <section id="about" className="relative z-10 pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="mb-8">
+            <div className="mb-8 flex flex-col items-center">
+              <img
+                src={publicAsset("profile.jpg")}
+                alt="Aleksandar Lončar"
+                className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-green-500/40 shadow-lg shadow-green-500/10 mb-6"
+                width={160}
+                height={160}
+              />
               <h1 className="text-6xl font-bold text-green-400 mb-4">
                 <span className="text-green-300">$</span> whoami
               </h1>
@@ -166,7 +177,7 @@ const Portfolio = () => {
               <Button 
                 variant="outline" 
                 className="border-green-400 text-green-400 hover:bg-green-400 hover:text-black font-bold px-8 py-3"
-                onClick={() => window.open('/Loncar DevOps.pdf', '_blank')}
+                onClick={() => window.open(publicAsset("Loncar DevOps.pdf"), "_blank")}
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download CV
